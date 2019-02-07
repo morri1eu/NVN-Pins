@@ -1,0 +1,4 @@
+.body{
+    width: 100%;
+    background-image: linear-gradient(to right, blue, red);
+}

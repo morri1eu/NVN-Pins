@@ -1,0 +1,36 @@
+#SearchBar{
+    width: 100%;
+    background-image: linear-gradient(to right, blue, red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50,0,50,0
+}
+form{
+    height: 50px;
+    width: 60%;
+    text-align: center;
+}
+.input{
+    opacity: 1;
+    border: none;
+    border-color: transparent;
+    background: transparent;
+    font-size: 30px;
+    color: white;
+    text-align: center
+}
+.searchImage{
+    height: 50px;
+    background: transparent;
+    border: transparent;
+}
+.container{
+    display: flex;
+    flex-direction: row
+}
+.row{
+    display: flex;
+    text-align: center;
+    align-self:center
+}

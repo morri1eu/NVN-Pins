@@ -1,0 +1,12 @@
+#banner{
+    height: 30%;
+    width: 100%;
+    background-image: linear-gradient(to right, blue, red);
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.Title{
+    color: white;
+    padding: 10px,0,10px,0;
+}
