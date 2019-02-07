@@ -2,10 +2,14 @@ import React, { Component } from 'react'
 import './SearchBar.css'
 import Sources from '../sources/Sources'
 import Sources2 from '../sources2/Sources2'
+import Sources3 from '../sources3/Sources3'
+import Sources4 from '../sources4/Sources4'
 let y
 let x = ''
 let passedProps
 let passedProps2
+let passedProps3
+let passedProps4
 export default class SearchBar extends Component {
     constructor(props) {
         super(props)
@@ -40,15 +44,21 @@ export default class SearchBar extends Component {
         if (this.state.passingProp === true) {
             passedProps = <Sources searchTerm={this.state.searchTerm} />
             passedProps2 = <Sources2 searchTerm={this.state.searchTerm} />
+            passedProps3 = <Sources3 searchTerm={this.state.searchTerm} />
+            passedProps4 = <Sources4 searchTerm={this.state.searchTerm} />
         }
         else if (this.state.passingProp === false && x !== '' && x !== y) {
             passedProps = <Sources searchTerm={x} />
             passedProps2 = <Sources2 searchTerm={x} />
+            passedProps3 = <Sources3 searchTerm={x} />
+            passedProps4 = <Sources4 searchTerm={x} />
             x = y
         }
         else {
             passedProps = <Sources searchTerm={x} />
             passedProps2 = <Sources2 searchTerm={x} />
+            passedProps3 = <Sources3 searchTerm={x} />
+            passedProps4 = <Sources4 searchTerm={x} />
         }
         return (
             <div>
@@ -69,6 +79,8 @@ export default class SearchBar extends Component {
                         <div className='container'>
                             {passedProps}
                             {passedProps2}
+                            {passedProps3}
+                            {passedProps4}
                         </div>
                     </div>
                 </div>

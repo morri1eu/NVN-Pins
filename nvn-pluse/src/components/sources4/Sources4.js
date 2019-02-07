@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import './Sources.css'
+import './Sources4.css'
 import Cards from '../cards/Cards';
 
 let value
-export default class Sources extends Component {
+export default class Sources4 extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            source: 'the-new-york-times',
+            source: 'breitbart-news',
             articles:[],
             searchTerm: ''
         }
@@ -25,8 +25,8 @@ export default class Sources extends Component {
             })
          
             console.log(document.getElementsByClassName('select-selected')[0].innerHTML)
-            document.getElementsByClassName('select-selected')[0].addEventListener('click',()=>{
-                value= document.getElementsByClassName('select-selected')[0].innerHTML
+            document.getElementsByClassName('select-selected')[3].addEventListener('click',()=>{
+                value= document.getElementsByClassName('select-selected')[3].innerHTML
                 let check= this.state.source.toLowerCase().replace(/ /g,'-')
                 this.setState({source:value.toLowerCase().replace(/ /g,'-')})
                 console.log(check + this.state.source)
@@ -91,15 +91,15 @@ export default class Sources extends Component {
     }}
     render() {        
         return (
-            <div className='container-sources' style={{ width: '25%', marginRight: 20, marginBottom: 20, marginLeft: 20  }}>
-                <div className='custom-select' style={{width:'100%'}}>
+            <div className='container-sources' style={{ width: '25%', marginRight: 20, }}>
+                <div className='custom-select' style={{ width: '100%' }}>
                     <select name='Left Source One' onChange={this.handleChange} value={this.state.source}>
                         <option value='0'>Left Leaning Source One</option>
-                        <option value='cnn' >CNN</option>
-                        <option value="the-new-york-times" >The New York Times</option>
-                        <option value="the-huffington-post">The Huffington Post</option>
-                        <option value="msnbc" >MSNBC</option>
-                        <option value='mashable' >Mashable</option>
+                        <option value='fox-news' >Fox News</option>
+                        <option value="breitbart-news" >Breitbart News</option>
+                        <option value="the-telegraph">The telegraph</option>
+                        <option value="the-washington-times" >The Washington Times</option>
+                        <option value='the-american-conservative' >The American Conservative</option>
                     </select>
                 </div>
                 <Cards articles={this.state.articles}/>

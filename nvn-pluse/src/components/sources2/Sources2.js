@@ -14,7 +14,7 @@ export default class Sources2 extends Component {
     }
 
     async componentWillMount(props) {
-        await fetch(`https://newsapi.org/v2/everything?sources=${this.state.source}&pageSize=5&apiKey=5573b7a235654d248bf3d502bd3417e6`)
+        await fetch(`https://newsapi.org/v2/everything?sources=${this.state.source}&pageSize=20&apiKey=5573b7a235654d248bf3d502bd3417e6`)
             .then((result) => result.json())
             .then(response =>{
                 this.setState({ articles: response.articles })
@@ -50,7 +50,7 @@ export default class Sources2 extends Component {
     async getArticles(props){
         console.log(props)
         if(props && props.searchTerm !==undefined){
-            await fetch(`https://newsapi.org/v2/everything?sources=${this.state.source}&q=${props.searchTerm}&pageSize=5&apiKey=5573b7a235654d248bf3d502bd3417e6`)
+            await fetch(`https://newsapi.org/v2/everything?sources=${this.state.source}&q=${props.searchTerm}&pageSize=20&apiKey=5573b7a235654d248bf3d502bd3417e6`)
                 .then((result) => result.json())
                 .then(response =>{
                     this.setState({ articles: response.articles })
@@ -61,7 +61,7 @@ export default class Sources2 extends Component {
                 })
             }
             else{
-                await fetch(`https://newsapi.org/v2/top-headlines?sources=${this.state.source}&pageSize=5&apiKey=5573b7a235654d248bf3d502bd3417e6`)
+                await fetch(`https://newsapi.org/v2/top-headlines?sources=${this.state.source}&pageSize=20&apiKey=5573b7a235654d248bf3d502bd3417e6`)
                 .then((result) => result.json())
                 .then(response =>{
                     this.setState({ articles: response.articles })
@@ -77,7 +77,7 @@ export default class Sources2 extends Component {
     async componentWillReceiveProps(props){
         console.log(props)
         if(props.searchTerm){
-        await fetch(`https://newsapi.org/v2/everything?sources=${this.state.source}&q=${props.searchTerm}&pageSize=5&apiKey=5573b7a235654d248bf3d502bd3417e6`)
+        await fetch(`https://newsapi.org/v2/everything?sources=${this.state.source}&q=${props.searchTerm}&pageSize=20&apiKey=5573b7a235654d248bf3d502bd3417e6`)
             .then((result) => result.json())
             .then(response =>{
                 this.setState({ articles: response.articles })
