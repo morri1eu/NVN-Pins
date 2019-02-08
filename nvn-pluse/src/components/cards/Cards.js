@@ -14,7 +14,7 @@ export default class Cards extends Component {
                         <img className="card-img-top" src={article.urlToImage} style={{ width: '100%' }} alt="Article" />
                         <div className="card-body">
                             <h4 className="card-title">{article.title}</h4>
-                            <p className="card-text">{article.description}</p>
+                            <p className="card-text">{article.description || article.content}</p>
                         </div>
                 </a>
                 </div>
