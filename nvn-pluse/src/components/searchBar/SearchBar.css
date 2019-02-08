@@ -1,6 +1,7 @@
 #SearchBar{
     width: 100%;
-    background-image: linear-gradient(to right, blue, red);
+    /* background-image: linear-gradient(to right, blue, red); */
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;

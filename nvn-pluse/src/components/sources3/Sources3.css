@@ -55,7 +55,7 @@
   /* Style items (options): */
   .select-items {
     position: absolute;
-    background: red;
+    background-image: linear-gradient(to right, blue, red);
     top: 100%;
     left: 0;
     right: 0;
@@ -80,5 +80,6 @@
     display: flex;
     align-content: center;
     width: 100%;
-    background-image: linear-gradient(to right, blue, red);
+    /* background-image: linear-gradient(to right, blue, red); */
+    background-color: black;
     height: 100%;}

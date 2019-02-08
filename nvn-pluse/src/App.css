@@ -8,5 +8,6 @@
   display: flex;
   align-content: center;
   width: 100%;
-  background-image: linear-gradient(to right, blue, red);
+  /* background-image: linear-gradient(to right, blue, red); */
+  background-color: black;
   height: 2000px;}

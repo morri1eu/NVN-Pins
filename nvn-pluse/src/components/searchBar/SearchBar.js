@@ -72,8 +72,8 @@ export default class SearchBar extends Component {
                 <div className='body'>
                     <div className='col-md-12'>
                         <div className='container'>
-                            <h2 style={{textAlign:"center", width:'50%'}}>Left Leaning Sources</h2>
-                            <h2 style={{textAlign:"center", width:'50%'}}>Right Leaning Sources</h2>
+                            <h2 style={{ textAlign: "center", width: '50%' }}>Left Leaning Sources</h2>
+                            <h2 style={{ textAlign: "center", width: '50%' }}>Right Leaning Sources</h2>
 
                         </div>
                         <div className='container'>
@@ -82,9 +82,10 @@ export default class SearchBar extends Component {
                             {passedProps3}
                             {passedProps4}
                         </div>
+
+
+
                     </div>
-                </div>
-            </div>
-        )
-    }
-}
+                    </div>
+                    </div>
+        )}}
